@@ -1,0 +1,24 @@
+Here is the trivial blockchain NodeJS implementation done as demonstrative application for Edvantis training course. 
+
+**How to start**
+
+1) Copy entire repository and run `npm install`
+
+2) [Optional] You can set your own ports for HTTP and WS servers
+set HTTP_PORT=<your_http_port>
+set P2P_PORT=<your_p2p_port>
+By default HTTP_PORT is 8001, P2P_PORT is 7001.
+
+3) Start application `npm start`
+
+**Commands**
+
+1) List entire blockchain `curl http://localhost:<your_http_port>/blockchain`
+
+2) Add block `curl -H "Content-type:application/json" --data "{\"data\" : \"Your block data\"}" http://localhost:<your_http_port>/addBlock`
+
+3) List peers `curl http://localhost:<your_http_port>/peers`
+
+4) Add peer `curl -H "Content-type:application/json" --data "{\"peer\" : \"ws://localhost:<your_p2p_port>\"}" http://localhost:<your_http_port>/addPeer`
+
+*Note:* It is done for educational purposes, do not use it in real projects!
